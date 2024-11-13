@@ -1,0 +1,32 @@
+[
+    {
+      "moduleTitle": "Introdução à Energia Sustentável",
+      "questions": [
+        {
+          "question": "O que é sustentabilidade?",
+          "options": ["Uso consciente dos recursos naturais", "Produção industrial", "Energia não renovável"],
+          "answer": "Uso consciente dos recursos naturais"
+        },
+        {
+          "question": "Qual a principal diferença entre energia renovável e não renovável?",
+          "options": ["Custo", "Disponibilidade e reabastecimento", "Fonte de origem"],
+          "answer": "Disponibilidade e reabastecimento"
+        }
+      ]
+    },
+    {
+      "moduleTitle": "Impacto Ambiental",
+      "questions": [
+        {
+          "question": "O que é pegada de carbono?",
+          "options": ["Medida de emissão de gases de efeito estufa", "Custo da energia elétrica", "Peso do carbono no ambiente"],
+          "answer": "Medida de emissão de gases de efeito estufa"
+        },
+        {
+          "question": "Qual o principal benefício de práticas sustentáveis?",
+          "options": ["Redução de poluição", "Mais lucro", "Maior consumo de energia"],
+          "answer": "Redução de poluição"
+        }
+      ]
+    }
+   ]
