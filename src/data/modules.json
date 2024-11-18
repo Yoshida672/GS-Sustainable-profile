@@ -1,34 +1,112 @@
 [
-    {
-      "moduleTitle": "Introdução à Energia Sustentável",
-      "description": "Neste módulo, você será introduzido aos conceitos fundamentais da energia sustentável, explorando as diferenças entre fontes de energia renováveis e não renováveis. Além disso, abordaremos a importância da sustentabilidade no contexto global, os impactos ambientais das escolhas energéticas e como adotar práticas que reduzem a pegada de carbono. Prepare-se para aprender como a energia limpa pode transformar o nosso futuro!",
-      "questions": [
-        {
-          "question": "O que é sustentabilidade?",
-          "options": ["Uso consciente dos recursos naturais", "Produção industrial", "Energia não renovável"],
-          "answer": "Uso consciente dos recursos naturais"
-        },
-        {
-          "question": "Qual a principal diferença entre energia renovável e não renovável?",
-          "options": ["Custo", "Disponibilidade e reabastecimento", "Fonte de origem"],
-          "answer": "Disponibilidade e reabastecimento"
-        }
-      ]
-    },
-    {
-      "moduleTitle": "Impacto Ambiental",
-      "description": "Neste módulo, exploraremos os efeitos das atividades humanas no meio ambiente, com foco no impacto da produção e consumo de energia. Você aprenderá sobre a poluição do ar, mudanças climáticas e a degradação dos ecossistemas, além de discutir soluções e práticas para minimizar esses impactos. Vamos entender como escolhas conscientes podem contribuir para um planeta mais saudável e sustentável!",
-      "questions": [
-        {
-          "question": "O que é pegada de carbono?",
-          "options": ["Medida de emissão de gases de efeito estufa", "Custo da energia elétrica", "Peso do carbono no ambiente"],
-          "answer": "Medida de emissão de gases de efeito estufa"
-        },
-        {
-          "question": "Qual o principal benefício de práticas sustentáveis?",
-          "options": ["Redução de poluição", "Mais lucro", "Maior consumo de energia"],
-          "answer": "Redução de poluição"
-        }
-      ]
-    }
-   ]
+  {
+    "moduleTitle": "Introdução à Energia Sustentável",
+    "questions": [
+      {
+        "question": "O que significa 'energia sustentável'?",
+        "options": [
+          "Energia que não causa impacto ambiental negativo",
+          "Energia proveniente de fontes fósseis",
+          "Energia que pode ser gerada sem limites",
+          "Energia produzida apenas em usinas nucleares"
+        ],
+        "correctAnswer": "Energia que não causa impacto ambiental negativo"
+      },
+      {
+        "question": "Qual é a principal diferença entre energia renovável e não renovável?",
+        "options": [
+          "A energia renovável nunca se esgota, enquanto a não renovável pode se esgotar",
+          "A energia renovável é mais barata",
+          "A energia renovável vem de fontes fósseis",
+          "A energia renovável é mais poluente"
+        ],
+        "correctAnswer": "A energia renovável nunca se esgota, enquanto a não renovável pode se esgotar"
+      },
+      {
+        "question": "Qual é a principal vantagem da energia solar em relação à energia gerada por combustíveis fósseis?",
+        "options": [
+          "A energia solar é mais cara e menos eficiente",
+          "A energia solar não polui o ambiente e é inesgotável",
+          "A energia solar depende de grandes usinas",
+          "A energia solar não pode ser utilizada em áreas urbanas"
+        ],
+        "correctAnswer": "A energia solar não polui o ambiente e é inesgotável"
+      },
+      {
+        "question": "O que é a pegada de carbono?",
+        "options": [
+          "A quantidade de energia necessária para produzir um produto",
+          "A quantidade de gases de efeito estufa liberados na atmosfera devido a atividades humanas",
+          "A quantidade de recursos naturais usados para gerar energia",
+          "A quantidade de energia usada por um país em um ano"
+        ],
+        "correctAnswer": "A quantidade de gases de efeito estufa liberados na atmosfera devido a atividades humanas"
+      },
+      {
+        "question": "Qual é a principal fonte de energia utilizada para gerar eletricidade no Brasil?",
+        "options": [
+          "Energia nuclear",
+          "Energia solar",
+          "Energia hidrelétrica",
+          "Energia eólica"
+        ],
+        "correctAnswer": "Energia hidrelétrica"
+      }
+    ]
+  },
+  {
+    "moduleTitle": "Energia Renovável vs. Não Renovável",
+    "questions": [
+      {
+        "question": "Qual das seguintes fontes de energia é considerada não renovável?",
+        "options": [
+          "Energia solar",
+          "Energia hídrica",
+          "Energia geotérmica",
+          "Petróleo"
+        ],
+        "correctAnswer": "Petróleo"
+      },
+      {
+        "question": "Quais são os principais impactos ambientais do uso de fontes de energia não renováveis?",
+        "options": [
+          "Não há impacto ambiental",
+          "Poluição do ar e aumento da emissão de gases de efeito estufa",
+          "Aumento da biodiversidade",
+          "Conservação da natureza"
+        ],
+        "correctAnswer": "Poluição do ar e aumento da emissão de gases de efeito estufa"
+      },
+      {
+        "question": "O que é energia eólica?",
+        "options": [
+          "Energia gerada pelo movimento das águas",
+          "Energia gerada pelo calor da terra",
+          "Energia gerada pela ação do vento",
+          "Energia proveniente de combustíveis fósseis"
+        ],
+        "correctAnswer": "Energia gerada pela ação do vento"
+      },
+      {
+        "question": "Qual é a principal característica das fontes de energia renováveis?",
+        "options": [
+          "Elas podem ser esgotadas com o tempo",
+          "Elas são sustentáveis e não se esgotam facilmente",
+          "Elas causam grandes impactos ambientais",
+          "Elas são produzidas apenas em usinas hidrelétricas"
+        ],
+        "correctAnswer": "Elas são sustentáveis e não se esgotam facilmente"
+      },
+      {
+        "question": "O que é a energia biomassa?",
+        "options": [
+          "Energia gerada a partir de matéria orgânica",
+          "Energia proveniente do sol",
+          "Energia gerada pelo vento",
+          "Energia produzida em usinas nucleares"
+        ],
+        "correctAnswer": "Energia gerada a partir de matéria orgânica"
+      }
+    ]
+  }
+]
