@@ -1,6 +1,7 @@
 [
     {
       "moduleTitle": "Introdução à Energia Sustentável",
+      "description": "Neste módulo, você será introduzido aos conceitos fundamentais da energia sustentável, explorando as diferenças entre fontes de energia renováveis e não renováveis. Além disso, abordaremos a importância da sustentabilidade no contexto global, os impactos ambientais das escolhas energéticas e como adotar práticas que reduzem a pegada de carbono. Prepare-se para aprender como a energia limpa pode transformar o nosso futuro!",
       "questions": [
         {
           "question": "O que é sustentabilidade?",
@@ -16,6 +17,7 @@
     },
     {
       "moduleTitle": "Impacto Ambiental",
+      "description": "Neste módulo, exploraremos os efeitos das atividades humanas no meio ambiente, com foco no impacto da produção e consumo de energia. Você aprenderá sobre a poluição do ar, mudanças climáticas e a degradação dos ecossistemas, além de discutir soluções e práticas para minimizar esses impactos. Vamos entender como escolhas conscientes podem contribuir para um planeta mais saudável e sustentável!",
       "questions": [
         {
           "question": "O que é pegada de carbono?",
