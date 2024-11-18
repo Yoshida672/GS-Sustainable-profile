@@ -1,14 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/fa'; // Certifique-se de ter o react-icons instalado
 
 const SobreNosPage = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-r from-[#21CCBC] via-[#85F1B2] to-[#B6DD6A]">
-      {/* Sobreposição mais forte para melhorar contraste */}
-      <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
-
       {/* Conteúdo principal */}
       <div className="relative z-10 flex-grow p-6">
         {/* Cabeçalho com links */}
@@ -37,11 +34,13 @@ const SobreNosPage = () => {
             />
             <h2 className="text-2xl font-semibold text-[#21CCBC]">Gustavo Monção</h2>
             <p className="mt-2 text-gray-600">
+              LinkedIn: 
               <a href="https://www.linkedin.com/in/gustavo-monção-574a38224/" target="_blank" className="text-blue-500 hover:underline flex items-center">
                 <FaLinkedin className="mr-2 text-xl" /> Perfil do LinkedIn
               </a>
             </p>
             <p className="text-gray-600">
+              GitHub: 
               <a href="https://github.com/moncaogustavo" target="_blank" className="text-blue-500 hover:underline flex items-center">
                 <FaGithub className="mr-2 text-xl" /> Perfil no GitHub
               </a>
@@ -60,11 +59,13 @@ const SobreNosPage = () => {
             />
             <h2 className="text-2xl font-semibold text-[#21CCBC]">Gustavo Matias</h2>
             <p className="mt-2 text-gray-600">
+              LinkedIn: 
               <a href="https://www.linkedin.com/in/gustavo-matias-teixeira-2b89a7266/" target="_blank" className="text-blue-500 hover:underline flex items-center">
                 <FaLinkedin className="mr-2 text-xl" /> Perfil do LinkedIn
               </a>
             </p>
-            <p className="text-gray-600"> 
+            <p className="text-gray-600">
+              GitHub: 
               <a href="https://github.com/Gustavo295" target="_blank" className="text-blue-500 hover:underline flex items-center">
                 <FaGithub className="mr-2 text-xl" /> Perfil no GitHub
               </a>
@@ -82,12 +83,14 @@ const SobreNosPage = () => {
               className="rounded-full mb-4"
             />
             <h2 className="text-2xl font-semibold text-[#21CCBC]">Eric Yoshida</h2>
-            <p className="mt-2 text-gray-600"> 
+            <p className="mt-2 text-gray-600">
+              LinkedIn: 
               <a href="https://www.linkedin.com/in/eric-issamu-356325274/" target="_blank" className="text-blue-500 hover:underline flex items-center">
                 <FaLinkedin className="mr-2 text-xl" /> Perfil do LinkedIn
               </a>
             </p>
-            <p className="text-gray-600"> 
+            <p className="text-gray-600">
+              GitHub: 
               <a href="https://github.com/Yoshida672" target="_blank" className="text-blue-500 hover:underline flex items-center">
                 <FaGithub className="mr-2 text-xl" /> Perfil no GitHub
               </a>
