@@ -3,12 +3,12 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
-import modules from "@/data/modules.json"; // Certifique-se de que seu JSON está correto
+import modules from "@/data/modules.json";
 
 const ModulePage = () => {
   const router = useRouter();
   const pathname = usePathname();
-  const moduleIndex = parseInt(pathname.split("/")[3]);  // A captura do módulo a partir da URL
+  const moduleIndex = parseInt(pathname.split("/")[3]);
   const module = modules[moduleIndex];
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -17,6 +17,7 @@ const ModulePage = () => {
   const [isAnswered, setIsAnswered] = useState(false);
   const [xp, setXP] = useState(0);
   const [lives, setLives] = useState(5);
+  const [answeredQuestions, setAnsweredQuestions] = useState<number>(0);
 
   useEffect(() => {
     const storedXP = parseInt(localStorage.getItem("xp") || "0", 10);
@@ -32,7 +33,7 @@ const ModulePage = () => {
 
     if (lives <= 0) {
       alert("Você perdeu todas as vidas! O módulo será reiniciado.");
-      router.push("/"); // Redireciona para a página inicial
+      router.push("/");
     }
   }, [xp, lives, router]);
 
@@ -47,11 +48,13 @@ const ModulePage = () => {
     setIsAnswered(true);
 
     if (selectedAnswer === currentQuestion.correctAnswer) {
-      setXP(xp + 10); // Ganha 10 pontos por resposta correta
+      setXP(xp + 10);
       setCorrectAnswers(correctAnswers + 1);
     } else {
-      setLives(lives - 1); // Perde uma vida por resposta errada
+      setLives(lives - 1);
     }
+
+    setAnsweredQuestions(answeredQuestions + 1);
   };
 
   const handleNextQuestion = () => {
@@ -61,12 +64,12 @@ const ModulePage = () => {
       setSelectedAnswer(null);
     } else {
       localStorage.setItem(`module${moduleIndex + 1}Completed`, "true");
-      if (moduleIndex < modules.length - 1) {
-        router.push(`/game/module/${moduleIndex + 1}`); // Vai para o próximo módulo
-      } else {
-        router.push("/"); // Redireciona para a página principal após o último módulo
-      }
+      router.push("/");
     }
+  };
+
+  const handleGoHome = () => {
+    router.push("/");
   };
 
   return (
@@ -123,12 +126,20 @@ const ModulePage = () => {
                 >
                   {currentQuestionIndex < module.questions.length - 1
                     ? "Próxima Pergunta"
-                    : moduleIndex < modules.length - 1
-                    ? "Próximo Módulo"
                     : "Concluir Módulo"}
                 </button>
               </div>
             )}
+
+            {/* Navegação extra */}
+            <div className="mt-6 flex justify-between">
+              <button
+                className="px-6 py-2 bg-gray-500 text-white rounded-lg"
+                onClick={handleGoHome}
+              >
+                Voltar para a Página Principal
+              </button>
+            </div>
           </div>
         </div>
       ) : (
