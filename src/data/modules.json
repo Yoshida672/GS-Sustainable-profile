@@ -108,5 +108,445 @@
         "correctAnswer": "Energia gerada a partir de matéria orgânica"
       }
     ]
+  },
+  {
+    "moduleTitle": "Impactos Ambientais da Geração de Energia",
+    "questions": [
+      {
+        "question": "Qual é o maior impacto ambiental da queima de combustíveis fósseis?",
+        "options": [
+          "Aquecimento global e mudanças climáticas",
+          "Redução da camada de ozônio",
+          "Aumento da biodiversidade",
+          "Reflorestamento natural"
+        ],
+        "correctAnswer": "Aquecimento global e mudanças climáticas"
+      },
+      {
+        "question": "Qual fonte de energia é conhecida por alterar significativamente o habitat natural?",
+        "options": [
+          "Energia solar",
+          "Energia eólica",
+          "Energia hidrelétrica",
+          "Energia geotérmica"
+        ],
+        "correctAnswer": "Energia hidrelétrica"
+      },
+      {
+        "question": "Quais são os resíduos gerados pela energia nuclear?",
+        "options": [
+          "Resíduos altamente radioativos",
+          "Dióxido de carbono",
+          "Metano",
+          "Não há resíduos"
+        ],
+        "correctAnswer": "Resíduos altamente radioativos"
+      },
+      {
+        "question": "Como a energia renovável contribui para a redução do efeito estufa?",
+        "options": [
+          "Ela reduz a emissão de gases de efeito estufa",
+          "Ela consome menos água",
+          "Ela diminui o consumo de alimentos",
+          "Ela reduz a erosão do solo"
+        ],
+        "correctAnswer": "Ela reduz a emissão de gases de efeito estufa"
+      },
+      {
+        "question": "Qual prática reduz a pegada de carbono?",
+        "options": [
+          "Uso de energia renovável",
+          "Queima de carvão",
+          "Construção de barragens",
+          "Consumo de combustível fóssil"
+        ],
+        "correctAnswer": "Uso de energia renovável"
+      }
+    ]
+  },
+  {
+    "moduleTitle": "Eficiência Energética",
+    "questions": [
+      {
+        "question": "O que significa eficiência energética?",
+        "options": [
+          "Produzir mais energia a partir de combustíveis fósseis",
+          "Utilizar menos energia para realizar a mesma tarefa",
+          "Construir mais usinas nucleares",
+          "Aumentar o consumo de eletricidade"
+        ],
+        "correctAnswer": "Utilizar menos energia para realizar a mesma tarefa"
+      },
+      {
+        "question": "Qual prática melhora a eficiência energética em casa?",
+        "options": [
+          "Deixar luzes acesas durante o dia",
+          "Usar lâmpadas LED",
+          "Manter aparelhos elétricos ligados o tempo todo",
+          "Utilizar chuveiro elétrico em dias quentes"
+        ],
+        "correctAnswer": "Usar lâmpadas LED"
+      },
+      {
+        "question": "Qual setor é responsável pelo maior consumo de energia globalmente?",
+        "options": [
+          "Industrial",
+          "Agrícola",
+          "Residencial",
+          "Comercial"
+        ],
+        "correctAnswer": "Industrial"
+      },
+      {
+        "question": "Como as indústrias podem aumentar a eficiência energética?",
+        "options": [
+          "Reduzindo processos produtivos",
+          "Adotando tecnologias mais modernas",
+          "Aumentando o uso de carvão",
+          "Diminuindo o número de trabalhadores"
+        ],
+        "correctAnswer": "Adotando tecnologias mais modernas"
+      },
+      {
+        "question": "Qual dos itens abaixo representa uma tecnologia eficiente?",
+        "options": [
+          "Ar-condicionado com selo Procel",
+          "Geradores movidos a carvão",
+          "Lâmpadas incandescentes",
+          "Motores antigos em máquinas industriais"
+        ],
+        "correctAnswer": "Ar-condicionado com selo Procel"
+      }
+    ]
+  },
+  {
+    "moduleTitle": "Energia Solar e Eólica",
+    "questions": [
+      {
+        "question": "Quais são as vantagens da energia solar?",
+        "options": [
+          "É inesgotável e limpa",
+          "É limitada e cara",
+          "Depende de carvão",
+          "Aumenta a emissão de CO2"
+        ],
+        "correctAnswer": "É inesgotável e limpa"
+      },
+      {
+        "question": "Qual é a principal fonte de energia utilizada para os painéis solares?",
+        "options":[
+          "Eletricidade",
+          "Raios-X",
+          "Luz do Sol",
+          "Energia Térmica"
+        ],
+        "correctAnswer": "Luz do Sol"
+      },
+      {
+        "question": "Qual é uma das maiores vantagens da energia eólica?",
+        "options":[
+          "É gerada apenas em áreas quentes",
+          "Não emite gases de efeito estufa",
+          "Depende de combustíveis fósseis",
+          "Funciona apenas durante o dia"
+        ],
+        "correctAnswer": "Não emite gases de efeito estufa"
+      },
+      {
+        "question": "Por que as turbinas eólicas são instaladas em locais altos ou no mar?",
+        "options":[
+          "Para evitar colisões com pássaros",
+          "Para aproveitar ventos mais fortes e constantes",
+          "Porque o ar é mais limpo nesses lugares",
+          "Para reduzir os custos de manutenção"
+        ],
+        "correctAnswer": "Para aproveitar ventos mais fortes e constantes"
+      },
+      {
+        "question": "O que acontece quando não há vento para as turbinas eólicas?",
+        "options":[
+          "A energia gerada é interrompida",
+          "A turbina usa energia solar para compensar",
+          "As turbinas continuam girando com força acumulada",
+          "A energia é gerada pelo calor da turbina"
+        ],
+        "correctAnswer": "A energia gerada é interrompida"
+      }
+    ]
+  },
+  {
+    "moduleTitle": "Transporte Sustentável",
+    "questions" :[
+      {
+        "question": "Qual é a principal vantagem do transporte público em relação ao uso de carros individuais?",
+        "options": [
+          "Reduz o tempo de viagem para todas as pessoas",
+          "Emite menos poluentes por pessoa transportada",
+          "É sempre mais rápido que o carro",
+          "Depende menos de combustíveis fósseis"
+        ],
+        "correctAnswer": "Emite menos poluentes por pessoa transportada"
+      },
+      {
+        "question": "O que significa o termo 'mobilidade ativa' em transporte sustentável?",
+        "options":[
+          "Veículos híbridos que alternam entre gasolina e eletricidade",
+          "O uso de modos de transporte que envolvem atividade física, como caminhar e andar de bicicleta",
+          "Sistemas de transporte público que operam continuamente sem interrupção",
+          "Uso de carros elétricos compartilhados em cidades"
+        ],
+        "correctAnswer": "O uso de modos de transporte que envolvem atividade física, como caminhar e andar de bicicleta"
+      },
+      {
+        "question": "Por que veículos elétricos são considerados uma solução mais sustentável?",
+        "options":[
+          "São mais baratos para produzir",
+          "Não produzem emissões de gases poluentes durante o uso",
+          "Têm maior alcance do que veículos movidos a combustíveis fósseis",
+          "Nunca necessitam de manutenção"
+        ],
+        "correctAnswer": "Não produzem emissões de gases poluentes durante o uso"
+      },
+      {
+        "question": "Qual das opções abaixo é considerada uma prática sustentável no transporte urbano?",
+        "options":[
+          "Construir rodovias mais largas para reduzir congestionamentos",
+          "Implantar sistemas de compartilhamento de bicicletas",
+          "Reduzir a quantidade de transporte público para economizar energia",
+          "Incentivar o uso de carros esportivos para viagens curtas"
+        ],
+        "correctAnswer": "Implantar sistemas de compartilhamento de bicicletas"
+      },
+      {
+        "question": "Qual é o maior desafio para implementar sistemas de transporte sustentável em cidades grandes?",
+        "options":[
+          "A falta de tecnologia para criar alternativas viáveis",
+          "O custo elevado para construir infraestruturas como ciclovias e metrôs",
+          "A preferência por transporte público pelos cidadãos",
+          "A dificuldade em obter combustíveis renováveis"
+        ],
+        "correctAnswer": "O custo elevado para construir infraestruturas como ciclovias e metrôs"
+      }
+    ]
+  },
+  {
+    "moduleTitle": "Políticas Públicas para Energia Limpa",
+    "questions" :[
+      {
+        "question": "Qual é o principal objetivo de políticas públicas voltadas para energia limpa?",
+        "options":[
+          "Tornar os combustíveis fósseis mais baratos",
+          "Reduzir emissões de gases de efeito estufa e promover sustentabilidade",
+          "Eliminar todas as formas de geração de energia não renovável de imediato",
+          "Incentivar o consumo excessivo de eletricidade"
+        ],
+        "correctAnswer": "Reduzir emissões de gases de efeito estufa e promover sustentabilidade"
+      },
+      {
+        "question": "Qual tipo de incentivo financeiro os governos geralmente oferecem para promover energia limpa?",
+        "options":[
+          "Subsídios e isenções fiscais para projetos de energia renovável",
+          "Multas para quem utiliza energia elétrica",
+          "Taxas adicionais para produção de energia solar e eólica",
+          "Redução dos preços do petróleo para compensar a concorrência"
+        ],
+        "correctAnswer": "Subsídios e isenções fiscais para projetos de energia renovável"
+      },
+      {
+        "question": "O que são metas de transição energética nas políticas públicas?",
+        "options":[
+          "Obrigações de reduzir a produção de energia nuclear em todo o país",
+          "Compromissos governamentais para aumentar a participação de fontes renováveis na matriz energética",
+          "Projetos para substituir gás natural por carvão mineral",
+          "Planos para aumentar o consumo total de energia elétrica"
+        ],
+        "correctAnswer": "Compromissos governamentais para aumentar a participação de fontes renováveis na matriz energética"
+      },
+      {
+        "question": "Qual organização global frequentemente apoia políticas públicas para energia limpa?",
+        "options":[
+          "OPEC (Organização dos Países Exportadores de Petróleo)",
+          "ONU (Organização das Nações Unidas)",
+          "FIFA (Federação Internacional de Futebol)",
+          "WHO (Organização Mundial da Saúde)"
+        ],
+        "correctAnswer": "ONU (Organização das Nações Unidas)"
+      },
+      {
+        "question": "O que são 'Certificados de Energia Renovável' (REC, na sigla em inglês)?",
+        "options":[
+          "Títulos que atestam a geração de energia renovável por produtores e são negociáveis",
+          "Licenças necessárias para explorar petróleo em áreas protegidas",
+          "Documentos que certificam a construção de usinas nucleares",
+          "Provas de que a energia é mais barata do que a convencional"
+        ],
+        "correctAnswer": "Títulos que atestam a geração de energia renovável por produtores e são negociáveis"
+      }
+    ]
+  },
+  {
+    "moduleTitle": "Energia Nuclear e Seus Desafios",
+    "questions":[
+      {
+        "question": "Qual é a principal fonte de energia utilizada em usinas nucleares?",
+        "options":[
+          "Energia solar",
+          "Reações químicas entre elementos pesados",
+          "Fissão de átomos, como o urânio-235",
+          "Combustão de gases nobres"
+        ],
+        "correctAnswer": "Fissão de átomos, como o urânio-235"
+      },
+      {
+        "question": "Qual é um dos maiores desafios relacionados ao uso de energia nuclear?",
+        "options":[
+          "O custo de extração de carvão para reatores nucleares",
+          "A emissão de gases poluentes",
+          "A incapacidade de gerar eletricidade em grande escala",
+          "O armazenamento seguro de resíduos radioativos"
+        ],
+        "correctAnswer": "O armazenamento seguro de resíduos radioativos"
+      },
+      {
+        "question": "Qual evento foi um marco negativo para o uso da energia nuclear no mundo?",
+        "options":[
+          "A criação do primeiro reator nuclear",
+          "O desastre de Chernobyl em 1986",
+          "A fundação da Agência Internacional de Energia Atômica (AIEA)",
+          "O desenvolvimento de usinas nucleares na década de 1950"
+        ],
+        "correctAnswer": "O desastre de Chernobyl em 1986"
+      },
+      {
+        "question": "Qual é uma vantagem da energia nuclear em comparação com fontes de combustíveis fósseis?",
+        "options":[
+          "Produz mais resíduos tóxicos",
+          "Emite menos gases de efeito estufa durante a geração de energia",
+          "Não precisa de medidas de segurança avançadas",
+          "Funciona apenas em países desenvolvidos"
+        ],
+        "correctAnswer": "Emite menos gases de efeito estufa durante a geração de energia"
+      },
+      {
+        "question": "O que é necessário para garantir a segurança de uma usina nuclear?",
+        "options":[
+          "Manutenção de reatores a temperaturas extremamente baixas",
+          "Monitoramento contínuo e sistemas de resfriamento emergenciais",
+          "Substituição anual de todos os reatores",
+          "Dependência de operadores humanos para todas as ações de controle"
+        ],
+        "correctAnswer": "Monitoramento contínuo e sistemas de resfriamento emergenciais"
+      }
+    ]
+  },
+  {
+    "moduleTitle": "A Importância da Conscientização",
+    "questions":[
+      {
+        "question": "Por que a conscientização é importante em temas ambientais?",
+        "options":[
+          "Para promover o consumo de produtos descartáveis",
+          "Para justificar o uso contínuo de combustíveis fósseis",
+          "Para reduzir custos de campanhas governamentais",
+          "Para mudar comportamentos e incentivar práticas sustentáveis"
+        ],
+        "correctAnswer": "Para mudar comportamentos e incentivar práticas sustentáveis"
+      },
+      {
+        "question": "Qual é um dos principais objetivos de campanhas de conscientização sobre energia?",
+        "options":[
+          "Fazer as pessoas economizarem dinheiro sem mudar hábitos",
+          "Incentivar o uso irresponsável de recursos naturais",
+          "Reduzir o desperdício de energia e aumentar a eficiência energética",
+          "Ensinar métodos de combustão de resíduos"
+        ],
+        "correctAnswer": "Reduzir o desperdício de energia e aumentar a eficiência energética"
+      },
+      {
+        "question": "Qual grupo é mais impactado pela falta de conscientização ambiental?",
+        "options" :[
+          "Gerações futuras",
+          "Empresas de tecnologia",
+          "Indústrias de combustíveis fósseis",
+          "Organizações sem fins lucrativos"
+        ],
+        "correctAnswer": "Gerações futuras"
+      },
+      {
+        "question": "Qual ferramenta é frequentemente usada para aumentar a conscientização sobre questões globais?",
+        "options":[
+          "Exclusivamente panfletos impressos",
+          "Veículos movidos a combustíveis fósseis",
+          "Filmes de ficção científica",
+          "Redes sociais"
+        ],
+        "correctAnswer": "Redes sociais"
+      },
+      {
+        "question": "Como a educação pode contribuir para a conscientização sustentável?",
+        "options" :[
+          "Ensinando apenas teorias sobre preservação ambiental",
+          "Proporcionando conhecimentos práticos e incentivando o senso crítico sobre o meio ambiente",
+          "Focando exclusivamente em soluções tecnológicas para problemas ambientais",
+          "Substituindo o ensino regular por treinamentos sobre reciclagem"
+        ],
+        "correctAnswer": "Proporcionando conhecimentos práticos e incentivando o senso crítico sobre o meio ambiente"
+      }
+    ]
+  },
+  {
+    "moduleTitle": "Tecnologias do Futuro",
+    "questions":[
+      {
+        "question": "Qual é uma das principais promessas da inteligência artificial (IA) para o futuro?",
+        "options":[
+          "Melhorar a eficiência em diversas áreas, como saúde, educação e transporte",
+          "Substituir completamente os seres humanos no mercado de trabalho",
+          "Criar realidades alternativas para entretenimento",
+          "Impedir o avanço de novas tecnologias"
+        ],
+        "correctAnswer": "Melhorar a eficiência em diversas áreas, como saúde, educação e transporte"
+      },
+      {
+        "question": "Qual tecnologia é considerada fundamental para o desenvolvimento de veículos autônomos?",
+        "options":[
+          "Blockchain",
+          "Internet das Coisas (IoT)",
+          "Redes 5G e sensores avançados",
+          "Realidade aumentada"
+        ],
+        "correctAnswer": "Redes 5G e sensores avançados"
+      },
+      {
+        "question": "O que são cidades inteligentes e como elas podem impactar o futuro?",
+        "options":[
+          "Cidades que utilizam apenas energia renovável",
+          "Cidades que implementam tecnologias para melhorar a qualidade de vida, como IoT e automação",
+          "Cidades que funcionam apenas com transporte público",
+          "Cidades com vigilância total de seus cidadãos"
+        ],
+        "correctAnswer": "Cidades que implementam tecnologias para melhorar a qualidade de vida, como IoT e automação"
+      },
+      {
+        "question": "Qual inovação tecnológica pode ser essencial para combater as mudanças climáticas no futuro?",
+        "options":[
+          "Desenvolvimento de roupas mais baratas",
+          "Robôs para exploração espacial",
+          "Impressão 3D de produtos de consumo",
+          "Energia de fusão nuclear"
+        ],
+        "correctAnswer": "Energia de fusão nuclear"
+      },
+      {
+        "question": "",
+        "options":[
+          "Uma forma de criar computadores à prova de falhas",
+          "Uma nova forma de processamento de dados utilizando ondas sonoras",
+          "A utilização de sistemas baseados em partículas subatômicas para realizar cálculos complexos mais rapidamente",
+          "Um processo de transmissão de dados por redes sociais"
+        ],
+        "correctAnswer": "A utilização de sistemas baseados em partículas subatômicas para realizar cálculos complexos mais rapidamente"
+      }
+    ]
   }
 ]

@@ -1,37 +1,56 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation'; // Para navegação
-import { usePathname } from 'next/navigation'; // Para pegar o caminho da URL
-import modules from "@/data/modules.json"; // Importando o JSON com os módulos
+import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
+import modules from "@/data/modules.json"; // Certifique-se de que seu JSON está correto
 
 const ModulePage = () => {
   const router = useRouter();
-  const pathname = usePathname(); // Captura a URL atual
-  const moduleIndex = parseInt(pathname.split("/")[3]); // Extrai o ID do módulo da URL
-  const module = modules[moduleIndex]; // Pega os dados do módulo pelo índice
-
-  useEffect(() => {
-    // Verifica se o Módulo 1 foi completado
-    if (moduleIndex === 1 && localStorage.getItem("module1Completed") !== "true") {
-      // Se for o Módulo 2 e o Módulo 1 não foi completado, redireciona para o Módulo 1
-      router.push("/game/module/0"); // Redireciona para o Módulo 1
-    }
-  }, [moduleIndex, router]);
+  const pathname = usePathname();
+  const moduleIndex = parseInt(pathname.split("/")[3]);  // A captura do módulo a partir da URL
+  const module = modules[moduleIndex];
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
+  const [xp, setXP] = useState(0);
+  const [lives, setLives] = useState(5);
 
-  const currentQuestion = module?.questions[currentQuestionIndex]; // Pergunta atual do módulo
+  useEffect(() => {
+    const storedXP = parseInt(localStorage.getItem("xp") || "0", 10);
+    const storedLives = parseInt(localStorage.getItem("lives") || "5", 10);
 
-  const handleAnswer = (answer: string) => {
-    setSelectedAnswer(answer);
+    setXP(storedXP);
+    setLives(storedLives);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("xp", xp.toString());
+    localStorage.setItem("lives", lives.toString());
+
+    if (lives <= 0) {
+      alert("Você perdeu todas as vidas! O módulo será reiniciado.");
+      router.push("/"); // Redireciona para a página inicial
+    }
+  }, [xp, lives, router]);
+
+  const currentQuestion = module?.questions[currentQuestionIndex];
+
+  const handleConfirmAnswer = () => {
+    if (!selectedAnswer) {
+      alert("Selecione uma resposta antes de confirmar.");
+      return;
+    }
+
     setIsAnswered(true);
 
-    if (answer === currentQuestion.correctAnswer) {
+    if (selectedAnswer === currentQuestion.correctAnswer) {
+      setXP(xp + 10); // Ganha 10 pontos por resposta correta
       setCorrectAnswers(correctAnswers + 1);
+    } else {
+      setLives(lives - 1); // Perde uma vida por resposta errada
     }
   };
 
@@ -41,9 +60,12 @@ const ModulePage = () => {
       setIsAnswered(false);
       setSelectedAnswer(null);
     } else {
-      // Marca o módulo como concluído
       localStorage.setItem(`module${moduleIndex + 1}Completed`, "true");
-      router.push("/"); // Redireciona para a página principal
+      if (moduleIndex < modules.length - 1) {
+        router.push(`/game/module/${moduleIndex + 1}`); // Vai para o próximo módulo
+      } else {
+        router.push("/"); // Redireciona para a página principal após o último módulo
+      }
     }
   };
 
@@ -52,6 +74,8 @@ const ModulePage = () => {
       {module && currentQuestion ? (
         <div className="flex flex-col items-center">
           <h1 className="text-3xl font-bold text-white mb-6">{module.moduleTitle}</h1>
+          <p className="text-lg text-white">XP: {xp}</p>
+          <p className="text-lg text-white">Vidas: {lives} ❤️</p>
           <div className="bg-white p-6 rounded-lg shadow-lg w-full md:w-1/2">
             <h2 className="text-2xl font-semibold text-black">{currentQuestion.question}</h2>
             <div className="mt-4">
@@ -59,13 +83,17 @@ const ModulePage = () => {
                 <button
                   key={index}
                   className={`w-full text-left p-3 my-2 rounded-lg ${
-                    selectedAnswer === option
+                    isAnswered
                       ? option === currentQuestion.correctAnswer
-                        ? "bg-green-500 text-white"
-                        : "bg-red-500 text-white"
+                        ? "bg-green-500 text-white animate-pulse"
+                        : option === selectedAnswer
+                        ? "bg-red-500 text-white"
+                        : "bg-gray-100"
+                      : selectedAnswer === option
+                      ? "bg-blue-200"
                       : "bg-gray-100"
                   }`}
-                  onClick={() => handleAnswer(option)}
+                  onClick={() => !isAnswered && setSelectedAnswer(option)}
                   disabled={isAnswered}
                 >
                   {option}
@@ -73,22 +101,30 @@ const ModulePage = () => {
               ))}
             </div>
 
-            {isAnswered && (
+            {!isAnswered ? (
+              <button
+                className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg"
+                onClick={handleConfirmAnswer}
+                disabled={!selectedAnswer}
+              >
+                Confirmar Resposta
+              </button>
+            ) : (
               <div className="mt-4 text-center">
                 <p>
                   {selectedAnswer === currentQuestion.correctAnswer
-                    ? "Resposta correta!"
-                    : "Resposta incorreta!"}
+                    ? "Resposta correta! +10 XP"
+                    : "Resposta incorreta! Você perdeu uma vida."}
                 </p>
-                <p>
-                  A resposta correta é: {currentQuestion.correctAnswer}
-                </p>
+                <p>A resposta correta é: {currentQuestion.correctAnswer}</p>
                 <button
                   className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg"
                   onClick={handleNextQuestion}
                 >
                   {currentQuestionIndex < module.questions.length - 1
                     ? "Próxima Pergunta"
+                    : moduleIndex < modules.length - 1
+                    ? "Próximo Módulo"
                     : "Concluir Módulo"}
                 </button>
               </div>
