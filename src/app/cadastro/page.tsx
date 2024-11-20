@@ -12,13 +12,11 @@ const CadastroPage = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Lógica para validar o formulário e realizar o cadastro do usuário
     if (senha !== confirmaSenha) {
       alert("As senhas não coincidem!");
       return;
     }
 
-    // Aqui você pode adicionar lógica para salvar os dados do usuário
     alert("Cadastro realizado com sucesso!");
   };
 
