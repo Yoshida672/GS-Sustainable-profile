@@ -2,14 +2,17 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from 'next/navigation';
 
-const CadastroPage = () => {
+export default function CadastroPage() {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [confirmaSenha, setConfirmaSenha] = useState("");
+  const [loading, setLoading] = useState(false);
+  const router = useRouter(); // Para redirecionar após o cadastro
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (senha !== confirmaSenha) {
@@ -17,7 +20,36 @@ const CadastroPage = () => {
       return;
     }
 
-    alert("Cadastro realizado com sucesso!");
+    setLoading(true);
+
+    // Enviar os dados para a API Java
+    const userData = {
+      nome,
+      email,
+      senha
+    };
+
+    try {
+      const response = await fetch('http://localhost:8080/user', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+      });
+
+      if (response.ok) {
+        alert("Cadastro realizado com sucesso!");
+        router.push('/'); 
+      } else {
+        alert("Erro ao realizar cadastro.");
+      }
+    } catch (error) {
+      console.error('Erro na requisição:', error);
+      alert("Erro ao realizar cadastro.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -25,7 +57,6 @@ const CadastroPage = () => {
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-extrabold text-black animate__animated animate__fadeIn">Cadastro de Usuário</h1>
         <div>
-          {/* Link para a página Home */}
           <Link href="/" className="text-black mr-4 hover:underline transition-colors">
             Voltar à Página Inicial
           </Link>
@@ -37,7 +68,6 @@ const CadastroPage = () => {
           <h2 className="text-2xl font-semibold text-center mb-6 text-[#21CCBC]">Preencha seus dados para se cadastrar</h2>
 
           <form onSubmit={handleSubmit}>
-            {/* Campo de Nome */}
             <div className="mb-4">
               <label htmlFor="nome" className="block text-lg font-medium text-gray-700">Nome Completo</label>
               <input
@@ -50,7 +80,6 @@ const CadastroPage = () => {
               />
             </div>
 
-            {/* Campo de Email */}
             <div className="mb-4">
               <label htmlFor="email" className="block text-lg font-medium text-gray-700">Email</label>
               <input
@@ -63,7 +92,6 @@ const CadastroPage = () => {
               />
             </div>
 
-            {/* Campo de Senha */}
             <div className="mb-4">
               <label htmlFor="senha" className="block text-lg font-medium text-gray-700">Senha</label>
               <input
@@ -76,7 +104,6 @@ const CadastroPage = () => {
               />
             </div>
 
-            {/* Campo de Confirmar Senha */}
             <div className="mb-4">
               <label htmlFor="confirmaSenha" className="block text-lg font-medium text-gray-700">Confirmar Senha</label>
               <input
@@ -89,22 +116,22 @@ const CadastroPage = () => {
               />
             </div>
 
-            {/* Botão de Cadastro */}
             <div className="mt-6">
-              <button type="submit" className="w-full py-3 bg-[#21CCBC] text-white rounded-lg text-lg hover:bg-[#85F1B2] focus:outline-none focus:ring-2 focus:ring-[#B6DD6A]">
-                Cadastrar
+              <button
+                type="submit"
+                className="w-full py-3 bg-[#21CCBC] text-white rounded-lg text-lg hover:bg-[#85F1B2] focus:outline-none focus:ring-2 focus:ring-[#B6DD6A]"
+                disabled={loading}
+              >
+                {loading ? 'Cadastrando...' : 'Cadastrar'}
               </button>
             </div>
           </form>
         </div>
       </div>
 
-      {/* Footer */}
       <footer className="bg-gradient-to-r from-[#21CCBC] via-[#85F1B2] to-[#B6DD6A] text-black p-4 text-center">
         <p>&copy; 2024 Sparkuest - Todos os direitos reservados.</p>
       </footer>
     </div>
   );
 };
-
-export default CadastroPage;

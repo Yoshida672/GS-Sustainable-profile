@@ -16,7 +16,6 @@ interface QuizCardProps {
 export const QuizCard: React.FC<QuizCardProps> = ({ question, onNext }) => {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [isAnswered, setIsAnswered] = useState<boolean>(false);
-  const isCorrect = selectedOption === question.answer;
 
   const handleAnswer = () => {
     if (selectedOption) setIsAnswered(true);

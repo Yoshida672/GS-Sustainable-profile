@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
 import modules from "@/data/modules.json";
 
-const ModulePage = () => {
+export default function ModulePage(){
   const router = useRouter();
   const pathname = usePathname();
   const moduleIndex = parseInt(pathname.split("/")[3]);
@@ -131,7 +131,6 @@ const ModulePage = () => {
               </div>
             )}
 
-            {/* Navegação extra */}
             <div className="mt-6 flex justify-between">
               <button
                 className="px-6 py-2 bg-gray-500 text-white rounded-lg"
@@ -149,4 +148,3 @@ const ModulePage = () => {
   );
 };
 
-export default ModulePage;

@@ -1,0 +1,92 @@
+{
+    "nickname": "Jogador123",
+    "level": 10,
+    "points": 2000,
+    "achievements": [
+      {
+        "id": 1,
+        "name": "Primeira Vitória",
+        "description": "Ganhe sua primeira partida",
+        "points": 100,
+        "isUnlocked": true
+      },
+      {
+        "id": 2,
+        "name": "Vencedor Imbatível",
+        "description": "Vença 10 partidas consecutivas",
+        "points": 300,
+        "isUnlocked": false
+      },
+      {
+        "id": 3,
+        "name": "Mestre da Arena",
+        "description": "Complete todas as missões",
+        "points": 500,
+        "isUnlocked": true
+      },
+      {
+        "id": 4,
+        "name": "Desbravador de Terras",
+        "description": "Explore 10 mapas diferentes",
+        "points": 200,
+        "isUnlocked": true
+      },
+      {
+        "id": 5,
+        "name": "Desafio Final",
+        "description": "Complete o Desafio Final sem morrer",
+        "points": 600,
+        "isUnlocked": false
+      },
+      {
+        "id": 6,
+        "name": "Espírito de Equipe",
+        "description": "Participe de 50 partidas em equipe",
+        "points": 150,
+        "isUnlocked": true
+      },
+      {
+        "id": 7,
+        "name": "Caçador de Tesouros",
+        "description": "Encontre 5 tesouros secretos",
+        "points": 350,
+        "isUnlocked": true
+      },
+      {
+        "id": 8,
+        "name": "Invencível",
+        "description": "Ganhe 100 partidas no modo competitivo",
+        "points": 1000,
+        "isUnlocked": false
+      },
+      {
+        "id": 9,
+        "name": "Lenda Viva",
+        "description": "Conquiste todos os títulos de evento",
+        "points": 800,
+        "isUnlocked": true
+      },
+      {
+        "id": 10,
+        "name": "Mestre do Combate",
+        "description": "Ganhe 50 batalhas contra outros jogadores",
+        "points": 250,
+        "isUnlocked": true
+      },
+      {
+        "id": 11,
+        "name": "Guerreiro Solitário",
+        "description": "Complete uma missão solo sem ajuda",
+        "points": 400,
+        "isUnlocked": true
+      },
+      {
+        "id": 12,
+        "name": "Conquista Imortal",
+        "description": "Complete todas as conquistas do jogo",
+        "points": 2000,
+        "isUnlocked": false
+      }
+    ]
+  }
+  
