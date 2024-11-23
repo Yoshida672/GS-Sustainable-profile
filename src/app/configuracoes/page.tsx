@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Header from "@/components/Header";
 
 export default function Configuracoes() {
   const [profileImage, setProfileImage] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
-  const [nickname, setNickname] = useState("Jogador123");  // Exemplo de nome de usuário
+  const [nickname, setNickname] = useState("Jogador123");
   const router = useRouter();
 
-  // Função para tratar o upload de imagem
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
@@ -22,19 +22,17 @@ export default function Configuracoes() {
     }
   };
 
-  // Função para simular o envio da imagem
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
     if (!profileImage) {
-      alert('Por favor, selecione uma imagem!');
+      alert("Por favor, selecione uma imagem!");
       return;
     }
 
-   
-    console.log('Imagem de perfil atualizada:', profileImage);
+    console.log("Imagem de perfil atualizada:", profileImage);
 
-    router.push('/perfil');
+    router.push("/perfil");
   };
 
   const generateRandomColor = (name: string) => {
@@ -46,25 +44,26 @@ export default function Configuracoes() {
     return color;
   };
 
-  // Função para pegar as iniciais do nome
   const getInitials = (name: string) => {
-    const words = name.split(' ');
+    const words = name.split(" ");
     return words.length > 1
       ? words[0].charAt(0) + words[1].charAt(0)
       : words[0].charAt(0);
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen py-8">
+    <div className="bg-gray-50 min-h-screen ">
+      <Header />
       <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-extrabold text-center mb-6">Configurações de Perfil</h1>
+        <h1 className="text-3xl font-extrabold text-center mb-6">
+          Configurações de Perfil
+        </h1>
 
         <div className="flex flex-col items-center mb-6">
-          {/* Exibição da imagem de perfil ou avatar com iniciais */}
           <div className="mb-4">
             {imagePreview ? (
               <img
-                src={imagePreview}  // Exibe a imagem carregada
+                src={imagePreview}
                 alt="Imagem de Perfil"
                 className="w-24 h-24 rounded-full object-cover"
               />
@@ -73,12 +72,13 @@ export default function Configuracoes() {
                 className="w-24 h-24 rounded-full flex items-center justify-center"
                 style={{ backgroundColor: generateRandomColor(nickname) }}
               >
-                <span className="text-white text-xl">{getInitials(nickname)}</span>
+                <span className="text-white text-xl">
+                  {getInitials(nickname)}
+                </span>
               </div>
             )}
           </div>
 
-          {/* Input para upload de imagem */}
           <input
             type="file"
             accept="image/*"
@@ -91,7 +91,7 @@ export default function Configuracoes() {
             <input
               type="text"
               value={nickname}
-              onChange={(e) => setNickname(e.target.value)}  // Atualiza o nickname
+              onChange={(e) => setNickname(e.target.value)}
               className="w-64 p-2 border border-gray-300 rounded-md mt-2"
             />
           </div>
