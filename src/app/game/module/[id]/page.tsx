@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { usePathname } from 'next/navigation';
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import modules from "@/data/modules.json";
 
-export default function ModulePage(){
+export default function ModulePage() {
   const router = useRouter();
   const pathname = usePathname();
   const moduleIndex = parseInt(pathname.split("/")[3]);
@@ -33,7 +33,7 @@ export default function ModulePage(){
 
     if (lives <= 0) {
       alert("Você perdeu todas as vidas! O módulo será reiniciado.");
-      router.push("/");
+      router.push("/modulos");
     }
   }, [xp, lives, router]);
 
@@ -64,23 +64,27 @@ export default function ModulePage(){
       setSelectedAnswer(null);
     } else {
       localStorage.setItem(`module${moduleIndex + 1}Completed`, "true");
-      router.push("/");
+      router.push("/results");
     }
   };
 
   const handleGoHome = () => {
-    router.push("/");
+    router.push("/modulos");
   };
 
   return (
     <div className="min-h-screen p-6 bg-gradient-to-r from-[#21CCBC] via-[#85F1B2] to-[#B6DD6A]">
       {module && currentQuestion ? (
         <div className="flex flex-col items-center">
-          <h1 className="text-3xl font-bold text-white mb-6">{module.moduleTitle}</h1>
+          <h1 className="text-3xl font-bold text-white mb-6">
+            {module.moduleTitle}
+          </h1>
           <p className="text-lg text-white">XP: {xp}</p>
           <p className="text-lg text-white">Vidas: {lives} ❤️</p>
           <div className="bg-white p-6 rounded-lg shadow-lg w-full md:w-1/2">
-            <h2 className="text-2xl font-semibold text-black">{currentQuestion.question}</h2>
+            <h2 className="text-2xl font-semibold text-black">
+              {currentQuestion.question}
+            </h2>
             <div className="mt-4">
               {currentQuestion.options.map((option, index) => (
                 <button
@@ -146,5 +150,4 @@ export default function ModulePage(){
       )}
     </div>
   );
-};
-
+}
