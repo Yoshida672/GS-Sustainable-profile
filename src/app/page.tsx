@@ -23,9 +23,9 @@ export default function HomePage() {
                 Assine Agora e Comece a Transformação
               </button>
             </Link>
-            <Link href="/login" passHref>
+            <Link href="/cadastro" passHref>
               <button className="px-6 py-3 bg-white hover:bg-gray-100 text-[#21CCBC] font-semibold text-lg rounded-lg transition-all">
-                Já possui uma conta? Faça login
+                Não possui uma conta? Faça Cadastro
               </button>
             </Link>
           </div>
