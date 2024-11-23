@@ -64,7 +64,7 @@ export default function ModulePage() {
       setSelectedAnswer(null);
     } else {
       localStorage.setItem(`module${moduleIndex + 1}Completed`, "true");
-      router.push("/results");
+      router.push(`${moduleIndex}/results`);
     }
   };
 
